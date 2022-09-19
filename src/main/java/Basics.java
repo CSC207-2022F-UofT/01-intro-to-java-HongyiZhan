@@ -39,6 +39,7 @@ public class Basics {
          *    (Relevant reading: 1.1.3. Printing things)
          */
         System.out.println(7 + 5);
+        System.out.println("Hello World!");
 
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
@@ -62,7 +63,7 @@ public class Basics {
          * TODO (Task 2): Create a variable named my_variable and assign it the
          *                value 100.
          */
-
+        int my_variable = 100;
 
 
         /* Do not remove the line below: if you did task 2 correctly, then
@@ -86,7 +87,10 @@ public class Basics {
          *
          *    (Relevant reading: 1.8.2. for Loops)
          */
-
+        for(int x = 10; x > -1; x = x-1) {
+            System.out.print("Current count: " + x);
+            System.out.print("\n");
+        };
         /*
          * TODO (Task 3): Create a for-loop that loops from 10 to 0, printing
          *                the following at each iteration:
@@ -141,6 +145,13 @@ public class Basics {
          *                you may use them if you wish.
          */
         StringBuilder ret = new StringBuilder();
+        for(String s : to_split.split(" "))
+
+        {
+
+            ret.append(s.charAt(0));
+
+        }
 
         // Fill in the rest of the body here
 
@@ -163,6 +174,11 @@ public class Basics {
      */
     public static int oddSum(int[] arr) {
         int current_sum = 0;
+        if( arr.length > 1 ){
+            for(int index=1; index<arr.length;index+=2){
+                current_sum +=arr[index];}
+        };
+
 
         /* TODO (Task 5): Complete this method body using a for-loop.
          *                You can find the length of an array by using the
